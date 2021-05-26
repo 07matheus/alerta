@@ -1,0 +1,151 @@
+#alert-custom {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  background: rgba(0,0,0,.5);
+  top: 0px;
+  left: 0px;
+  z-index: 99999999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+@media(min-width: 768px) {
+  .alert-box {
+    max-width: 60%;
+    min-width: 600px;
+  }
+}
+.alert-box {
+  background: #fff;
+  padding: 40px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 2px #4a4a4a;
+}
+.alert-box-close {
+  line-height: 18px;
+  height: 18px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  color: #FFF;
+  transition: all 0.5s;
+  position: absolute;
+  max-width: 80px;
+  max-height: 18px;
+  font-size: 15px;
+  top: 0;
+  right: 0;
+}
+.alert-box-close span {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.alert-box-close::before, .alert-box-close::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s;
+  background-color: #ff2525;
+}
+.alert-box-close:active::before {
+  transform: rotate(-45deg);
+}
+.alert-box-close:active::after {
+  transform: rotate(45deg);
+}
+
+/* ICON */
+.alert-box-icon {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+@media(max-width: 767px) {
+  .alert-box-icon {
+    width: 150px;
+    height: 150px;
+  }
+}
+.alert-box-icon.success {
+  background-image: url(./img/success.svg);
+  background-size: contain;
+}
+.alert-box-icon.error {
+  background-image: url(./img/error.svg);
+  background-size: contain;
+}
+.alert-box-icon.alert {
+  background-image: url(./img/warning.svg);
+  background-size: contain;
+}
+
+/* TITLE */
+.alert-box-title {
+  text-align: center;
+  font-weight: bold;
+}
+.alert-box-title.success {
+  color: #159315;
+}
+.alert-box-title.error {
+  color: #c60000;
+}
+.alert-box-title.alert {
+  color: #e8aa00;
+}
+
+
+/* MESSAGE */
+.alert-box-message {
+  margin: 25px 0;
+  font-size: 22px;
+  text-align: center;
+}
+
+/* BUTTONS */
+.alert-box-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+@media(max-width: 767px) {
+  .alert-box-button {
+    flex-wrap: wrap;
+  }
+}
+.alert-box-button-item {
+  max-width: 240px;
+  min-width: 50px;
+  min-height: 40px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+@media(max-width: 767px) {
+  .alert-box-button-item {
+    margin-top: 15px;
+  }
+}
+.alert-box-button-item.confirm {
+  background: #159315;
+}
+.alert-box-button-item.refused {
+  background: #c60000;
+}

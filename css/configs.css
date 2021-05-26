@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+main {
+  height: 100%;
+  margin: 40px auto;
+  width: 90%;
+}
+html {
+  background-color: #f0f0f0;
+}
+header, footer {
+  width: 100%;
+}
+
+.header-container, .footer-container {
+  text-align: center;
+  background: #8e8e8e;
+  box-shadow: 0 5px 20px 9px #959595;
+  padding: 20px 0;
+}
+.header-title {
+  font-size: 50px;
+  font-weight: bold;
+  color: #ffff1e;
+}
+.header-description {
+  color: #fff;
+}
+.infos {
+  width: 60%;
+  margin: 0 auto;
+}
+.box-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.box-image {
+  width: 30px;
+  margin-right: 10px;
+}
+.box-text, .box-link {
+  font-size: 22px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+/* FORMAT TEXT */
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 45px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+p {
+  text-indent: 20px;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+
+/* CODE EDITOR */
+.container-editor {
+  width: 80%;
+  margin: 0 auto;
+  border: 3px solid #a4a4a4;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.box-editor {
+  padding: 15px 10px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 6px 6px 0 0;
+}
+.copy-code {
+  width: 75%;
+  margin: 10px 5px;
+}
+.copy-warning {
+  width: 25%;
+  display: flex;
+  color: red;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+.copy-warning #contador {
+  margin-left: 5px;
+}
+.copy-warning #contador::after {
+  content: "s";
+}
+.box-actions {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.box-actions .item {
+  width: 10%;
+  padding: 10px 5px;
+  text-align: center;
+  background: #2c2cf9;
+  box-shadow: 3px 3px #0c0c37;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.box-actions .item:not(:last-child) {
+  margin-left: 5px;
+}
+.box-actions .item:active {
+  background: #151571;
+  box-shadow: 0 0;
+}
+.line-code {
+  display: flex;
+  margin: 10px 0;
+}
+.tag {
+  display: flex;
+}
+.tag > span:last-child {
+  margin-right: 0;
+}
+.name-tag, .resource-tag {
+  color: #f76363;
+}
+.attribute-tag {
+  color: #4eff4e;
+  font-style: italic
+}
+.value-attribute-tag {
+  color: #ffff6b;
+}
+.name-tag, .value-attribute-tag {
+  margin-right: 5px;
+}
